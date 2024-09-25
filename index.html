@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+
+</head>
+<body>
+    
+        <img src="./Assets/lady.svg" alt="LadySVG" />
+        <div class="wrapper">
+        
+            <input type="text" class="input-field" />
+            <div class="content-box">
+                <div class="typing-test">
+                    <p></p>
+                </div>
+                <div class="content">
+                    <ul class="result-details">
+                        <li class="time">
+                            <p>Time left: </p>
+                            <span><b>60</b>s</span>
+                        </li>
+                        <li class="mistake">
+                            <p>Mistakes: </p>
+                            <span>0</span>
+                        </li>
+                        <li class="wpm">
+                            <p>WPM: </p>
+                            <span>0</span>
+                        </li>
+                        <li class="cpm">
+                            <p>CPM: </p>
+                            <span>0</span>
+                        </li>
+    
+                    </ul>
+                    <button ><p>Try Again</p></button>
+                </div>
+            </div>
+        </div>
+   
+    <img class="boySvg" src="./Assets/gentleman.svg" alt="boySvg"/>
+    <script src="script.js"></script>
+
+    <!-- Sidebar Section -->
+    <div id="sidebar" class="sidebar">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+       <h2>Understanding the Metrics:</h2>
+       <p>Once you finish the test or when time runs out, 
+        the typing test will display your performance using the following key metrics:</p>
+        <p class="tL">Time Left:</p>
+        <p>This timer calculates the time taken to complete typing.</p>
+        <p class="wpmh">WPM (Words Per Minute):</p>
+        <p>This measures how many words you can type in one minute.</p>
+        <p class="cpmh">CPM (Characters Per Minute):</p>
+        <p>This measures how many characters (including spaces and punctuation) you type in one minute.</p>
+    </div>
+       
+   
+
+    <!-- Button to Open Sidebar (on the right side) -->
+    <div id="main-content">
+      <button class="openbtn" onclick="openSidebar()">☰ About</button>
+    
+    </div>
+
+
+</body>
+</html>

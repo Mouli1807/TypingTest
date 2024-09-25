@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+      
+      
+}
+
+.wrapper{
+    width: 790px;
+    padding: 35px;
+    background: rgb(224, 211, 243);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.wrapper .content-box{
+    padding: 13px 20px 0;
+    border-radius: 10px;
+    border: 1px solid purple;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.wrapper .input-field{
+    padding:13px 20px 0 ;
+    position: absolute;
+    opacity: 0;
+    z-index: -99;
+}
+
+.content-box .content{
+    margin-top: 17px;
+    display:flex;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid purple;
+}
+
+.content .result-details{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 140px);
+}
+
+.result-details li{
+    display: flex;
+    height: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.content button{
+    border: none;
+    outline: none;
+    width: 105px;
+    padding: 8px 0;
+    background: purple;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: transform 0.3 ease;
+}
+.content button:active {
+    transform: scale(0.96);
+}
+
+
+
+img {
+    display: block; /* Or you can use inline-block */
+    padding-right: 40px; /* Adjust padding if needed */
+    margin-right: 20px; /* Reset margin if necessary */
+    float: left; /* Align the image to the extreme left */
+    max-width: 100%; /* Ensures the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    transform: scale(1.5); /* Increases the size by 1.5 times */
+    
+    
+}
+
+.boySvg{
+    display: block; /* Or you can use inline-block */
+    padding-top: 200px; /* Adjust padding if needed */
+    margin-left: 80px; /* Reset margin if necessary */
+    float: left; /* Align the image to the extreme left */
+    max-width: 100vh; /* Ensures the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    transform: scale(1.5); /* Increases the size by 1.5 times */
+    
+}
+
+.typing-test p span{
+    position: relative;
+}
+
+.typing-test p span.active {
+    color: darkorange;
+    font-weight: bold;
+}
+
+.typing-test p span.correct{
+    color: green;
+  
+}
+
+
+.typing-test p span.incorrect{
+    color: red;
+    outline: 1px solid #fff;
+    background: #ffc0cb;
+    border-radius: 2px;
+}
+
+::selection{
+    color: solid #fff;
+    background: plum;
+}
+
+/* Sidebar styles (from the right) */
+.sidebar {
+    height: 100%; /* Full-height */
+    width: 0; /* Initial width to 0 (hidden) */
+    position: fixed; /* Fixed Sidebar (stay in place) */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0; /* Positioned from the right */
+    background-color: #770737; /* Black background */
+    opacity: 80%;
+    border-radius: 10px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: width 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px; /* Close button now on the left side of the sidebar */
+    font-size: 20px;
+    
+  }
+
+  .sidebar h2{
+    color: white;
+    padding: 10px 10px;
+      
+      
+  }
+
+  .sidebar p{
+    color: white;
+    border: #fff;
+    padding: 10px 10px;
+  }
+  
+  /* Button to open the sidebar (positioned on the right) */
+  .openbtn {
+    background-image: linear-gradient(to right, #C04848 0%, #480048  51%, #C04848  100%);
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: width 0.7s ease-in-out;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    padding: 20px 30px;
+    border: none;
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Positioned on the right side */
+    
+    
+  }
+  
+  .openbtn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Main content styling */
+  #main-content {
+    padding: 16px;
+    transition: margin-right 0.7s ease-in-out; /* Transition for when sidebar is open */
+  }
+  
+  #main-content h1 {
+    font-size: 20px;
+  }
+  
+  .wpmh{
+    font-weight: bold;
+  }
+          
+  .cpmh{
+    font-weight: bold;
+  }    
+  
+  .tL{
+    font-weight: bold;
+  }
+
+
+
+ 
+ 
+  
+ 
